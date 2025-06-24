@@ -1,0 +1,22 @@
+stages:
+    - precommit
+    - build_test
+
+pre-commit:
+    stage: precommit
+    image: node:20
+    variables:
+        npm_config_cache: /tmp/.npm
+    script:
+        - npm ci --no-cache
+        - npm run lint
+
+build_test:
+    stage: build_test
+    image: node:20
+    variables:
+        npm_config_cache: /tmp/.npm
+    script:
+        - npm ci
+        - npm run build
+        - npm run test
