@@ -29,6 +29,35 @@ Nous nous engageons à :
 - Vous tenir informé de l’avancement
 - Vous mentionner dans le changelog (nous vous le notifirons)
 
+Protocole de réponse aux incidents
+Comment isoler le système et redémarrer en toute sécurité :
+
+En cas de compromission ou de suspicion :
+
+## Isoler l'environnement compromis :
+
+-> Déconnecter immédiatement l’instance ou le service du réseau.
+
+-> Arrêter tous les processus suspects.
+
+-> Sauvegarder les journaux avant toute autre action.
+
+# Analyser la situation :
+
+-> Identifier les composants impactés (serveurs, API, base de données…).
+
+-> Comparer les fichiers modifiés avec la version Git la plus récente.
+
+# Redémarrage en toute sécurité :
+
+-> Restaurer une version propre du code à partir d’un commit sûr.
+
+-> Révoquer et régénérer les clés/API tokens compromis.
+
+-> Appliquer les correctifs nécessaires et effectuer un audit de sécurité.
+
+-> Relancer les services en production après validation.
+
 ## Versions actuellement supportées
 
 | Version | Supportée           |
@@ -46,61 +75,3 @@ Ce projet suit les pratiques de sécurités de [l’OWASP](https://owasp.org/) e
 
 
 Merci de votre contribution à la sécurité de ce projet !
-
-# Security Policy - ENG
-
-
-This project follows a responsible vulnerability disclosure policy.
-
-## How to Report a Vulnerability
-
-If you believe you have found a security vulnerability or a technical issue in this project, please **do not submit a public issue**, discussion, or pull request.
-
-Instead, report it through one of the following ways:
-
-- Contact us by email at [security@lesptitsploufs.com](mailto:security@lesptitsploufs.com)
-
-Please include as much information as possible to help us investigate and resolve the issue:
-
-- A detailed description of the vulnerability or technical issue
-- Steps to reproduce the problem
-- The potential impact
-- Affected version(s)
-- Code location (branch, tag, commit, or direct URL)
-- Required configuration (if any)
-- Relevant logs (if available)
-- Proof-of-concept or exploit code (if applicable)
-
-We commit to:
-
-- Acknowledge your report within 2 business days
-- Investigate and resolve the issue as soon as possible
-- Mention your name in the changelog if appropriate (unless you prefer to remain anonymous)
-
-## Disclosure Policy
-
-We kindly ask that you:
-
-- Give us a reasonable amount of time to address the issue before making any public disclosure
-- Refrain from exploiting the issue while it is being resolved
-
-Thank you for helping to make this project more secure!
-
-## Supported Versions
-
-The following versions are currently supported and receive security updates:
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.x     | ✅                 |
-| < 1.0   | ❌                 |
-
-## Disclosure Policy
-
-We kindly ask that you allow us a **reasonable amount of time** to address the issue before making any public disclosure.
-
-## Compliance
-
-This project follows [OWASP](https://owasp.org/) security best practices and uses automated tools to detect vulnerabilities.
-
-Thank you for contributing to the security of this project !
